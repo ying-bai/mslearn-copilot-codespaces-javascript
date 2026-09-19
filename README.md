@@ -4,6 +4,50 @@
 
 Explore how you can modify a JavaScript repository using code suggestions from GitHub Copilot to modify and customize a web application. By working with this repository, you'll quickly get hands-on with a JavaScript web app for a portfolio site.
 
+## プロジェクト概要
+
+このプロジェクトは、GitHub Copilot を使ってカスタマイズできる React 製のポートフォリオサイトです。プロフィール、自己紹介、スキル、制作物、SNS やメールへの連絡先を 1 ページにまとめて表示します。
+
+アプリケーションは Parcel で開発・ビルドします。サイトの基本情報や SNS アカウントは `src/App.jsx` の `siteProps` に定義され、各コンポーネントへ props として渡されます。画像や配色を変更することで、自分用のポートフォリオへ簡単に置き換えられます。
+
+## リポジトリ構成
+
+```text
+.
+├── .devcontainer/
+│   └── devcontainer.json       # GitHub Codespaces の開発環境設定
+├── src/
+│   ├── App.jsx                 # ページ全体の構成とサイト情報
+│   ├── index.html              # HTML エントリポイント
+│   ├── index.js                # React アプリケーションのマウント
+│   ├── styles.css              # アプリケーション共通のスタイル
+│   ├── Components/
+│   │   ├── Header.jsx          # 固定ナビゲーション
+│   │   ├── Home.jsx            # トップのプロフィール表示
+│   │   ├── About.jsx           # 自己紹介とスキル一覧
+│   │   ├── Portfolio.jsx       # 制作物・プロジェクト一覧
+│   │   └── Footer.jsx          # SNS とメールの連絡先
+│   └── images/
+│       ├── *.jpg / *.jpeg      # 各セクションの背景・表示画像
+│       └── socials/            # SNS・メールのアイコン
+├── translations/               # 翻訳関連の README
+├── package.json                # 依存関係と npm スクリプト
+├── package-lock.json           # 依存関係の固定情報
+├── .eslintrc                   # ESLint 設定
+├── .prettierrc                 # Prettier 設定
+├── LICENSE                     # リポジトリのライセンス
+├── LICENSE-CODE                # コードのライセンス
+├── SECURITY.md                 # セキュリティポリシー
+└── README.md                   # プロジェクト説明と学習手順
+```
+
+### 主な実行コマンド
+
+- `npm install`: 依存パッケージをインストール
+- `npm start`: 開発サーバーを起動
+- `npm run build`: 本番用ファイルを `dist/` にビルド
+- `npm run deploy`: GitHub Pages へデプロイ
+
 ## Requirements
 
 1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
